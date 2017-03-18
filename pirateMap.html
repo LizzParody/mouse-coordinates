@@ -1,0 +1,26 @@
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+  <title>Pirate Map</title>
+  <script type="text/javascript" charset="utf-8">
+    window.onload = init;
+
+    function init() {
+      var map = document.getElementById("map");
+      map.onmousemove = showCoords;
+    }
+
+    function showCoords(eventObj) {
+      var map = document.getElementById("coords");
+      var x = eventObj.clientX;
+      var y = eventObj.clientY;
+      map.innerHTML = "Map coordinates: " + x + ", " + y;
+    }
+  </script>
+</head>
+<body>
+  <p id="coords">Move mouse to find coordinates... </p>
+    <img id="map" src="map.jpg"/>
+</body>
+</html>
